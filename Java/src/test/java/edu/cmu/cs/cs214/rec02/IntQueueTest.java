@@ -50,15 +50,6 @@ public class IntQueueTest {
     }
 
     @Test
-    public void testClear() {
-        testList.forEach(n -> mQueue.enqueue(n));
-        mQueue.clear();
-        assertTrue(mQueue.isEmpty());
-        assertNull(mQueue.peek());
-        assertEquals(0, mQueue.size());
-    }
-
-    @Test
     public void testIsEmpty() {
         // This is an example unit test
         assertTrue(mQueue.isEmpty());
@@ -122,6 +113,15 @@ public class IntQueueTest {
         assertEquals(Integer.valueOf(3), mQueue.peek());
     }
 
+    @Test
+    public void testClear() {
+        testList.forEach(n -> mQueue.enqueue(n));
+        mQueue.clear();
+        assertTrue(mQueue.isEmpty());
+        assertNull(mQueue.peek());
+        assertEquals(0, mQueue.size());
+    }
+    
     @Test
     public void testContent() throws IOException {
         // This is an example unit test
